@@ -3,22 +3,36 @@
   <Class Name="EjemploHerencia.Empleado">
     <Position X="3.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Empleado.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAgAAAQAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Parciales\Empleado.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EjemploHerencia.Trabajador">
     <Position X="8.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Trabajador.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EjemploHerencia.Administrador">
     <Position X="5.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAgAAAAAQAAAAAAAAAAAA=</HashCode>
       <FileName>Administrador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EjemploHerencia.Externo">
+    <Position X="1.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Externo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EjemploHerencia.Empresa">
+    <Position X="1.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Empresa.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
