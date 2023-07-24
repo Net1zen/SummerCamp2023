@@ -18,7 +18,7 @@ namespace EjemploHerencia
         {
             try
             {
-                return $"\t Trabajador \tNombre: {Nombre} " + 
+                return $"Trabajador \tNombre: {Nombre} " + 
                     $"\tDias Vacaciones: {diasVacaciones} \tTurno: {Turno} \tJefe: {Jefe.Nombre}";
             }
             catch (System.NullReferenceException nre)

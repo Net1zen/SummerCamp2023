@@ -2,38 +2,36 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace EjemploHerencia
+namespace Modelo
 {
     public partial class Empleado
     {
-        public string Nombre
+        public virtual string Nombre { get; set; }
+
+        protected double diasVacaciones;
+
+        public Empleado()
         {
-            get;set;
+
         }
-
-        /*public Empleado()
-        {
-            Nombre = "";
-        }*/
-
         public Empleado(string nombre)
         {
             Nombre = nombre;
         }
 
-        protected double diasVacaciones;
-
         public virtual void CalculoVacaciones()
         {
             diasVacaciones += 10;
+
         }
+
+        public virtual void CalculoNomina() { }
 
         public override string ToString()
         {
-            return $"Empleado \tNombre: {Nombre} " + 
-                $"\tDias Vacaciones: {diasVacaciones} ";
+            return $"[ Empleado. Nombre: {Nombre} Dias Vacaciones: {diasVacaciones} ";
         }
-        
     }
 }

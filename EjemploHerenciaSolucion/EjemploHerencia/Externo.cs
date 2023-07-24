@@ -16,7 +16,7 @@ namespace EjemploHerencia
 
         public override string ToString()
         {
-            return $"\t Externo \tNombre: {Nombre} " + 
+            return $"Externo \tNombre: {Nombre} " + 
                 $"\tDias Vacaciones: {diasVacaciones} \tJefe: {Jefe.Nombre} \tEmpresa: {Empresa.Nombre}";
         }
 
