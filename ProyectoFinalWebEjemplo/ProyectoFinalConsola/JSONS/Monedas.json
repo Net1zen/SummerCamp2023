@@ -1,0 +1,17 @@
+[
+  {
+    "nombre": "Dólar estadounidense",
+    "codigo": "USD",
+    "valorEnDolares": 1.0
+  },
+  {
+    "nombre": "Euro",
+    "codigo": "EUR",
+    "valorEnDolares": 1.1138858
+  },
+  {
+    "nombre": "Libra esterlina",
+    "codigo": "GBP",
+    "valorEnDolares": 1.2963632
+  }
+]

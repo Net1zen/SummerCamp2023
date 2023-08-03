@@ -1,0 +1,62 @@
+{
+
+  "factores": [
+    {
+      "id": 0,
+      "MonedaOrigen": "EUR",
+      "MonedaDestino": "EUR",
+      "factor": 1
+    },
+    {
+      "id": 1,
+      "MonedaOrigen": "EUR",
+      "MonedaDestino": "USD",
+      "factor": 1.1001783
+    },
+    {
+      "id": 2,
+      "MonedaOrigen": "EUR",
+      "MonedaDestino": "GBP",
+      "factor": 0.85523619
+    },
+    {
+      "id": 3,
+      "MonedaOrigen": "USD",
+      "MonedaDestino": "USD",
+      "factor": 1
+    },
+    {
+      "id": 4,
+      "MonedaOrigen": "USD",
+      "MonedaDestino": "EUR",
+      "factor": 0.908944
+    },
+    {
+      "id": 5,
+      "MonedaOrigen": "USD",
+      "MonedaDestino": "GBP",
+      "factor": 0.77726791
+    },
+    {
+      "id": 6,
+      "MonedaOrigen": "GBP",
+      "MonedaDestino": "GBP",
+      "factor": 1
+    },
+    {
+      "id": 7,
+      "MonedaOrigen": "GBP",
+      "MonedaDestino": "EUR",
+      "factor": 1.16927
+    },
+    {
+      "id": 8,
+      "MonedaOrigen": "GBP",
+      "MonedaDestino": "USD",
+      "factor":  1.28656 
+    }
+  ]
+}
+
+
+
