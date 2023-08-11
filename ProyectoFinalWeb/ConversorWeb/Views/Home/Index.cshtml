@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Moneda>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+Son @Model.Count() monedas
+
+La primera moneda es @Model.Take(1).Select(m=>m.Code)
+
+<div class="text-center">
+    @foreach (var moneda in Model)
+    {
+        <h2>@moneda.Code</h2>
+        <h3>@moneda.Name</h3>
+        <h4>@moneda.Symbol</h4>
+    }
+</div>

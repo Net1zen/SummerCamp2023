@@ -1,14 +1,16 @@
-﻿@{
-    // Las variables se pueden crear aqui
+﻿@model IEnumerable<ConversorWeb.Models.Moneda> 
+@{
     ViewData["Title"] = "Home Page";
-    //var saludo = "Hola mundo en una variable!!!";
-    //var fecha = DateTime.Now;
 }
 
-<h1>@ViewBag.saludo</h1>
-<h2>Hoy es: @ViewBag.fecha</h2>
-<h3>Lista monedas: @ViewBag.Moneda</h3>
+Son @Model.Count() monedas
+
+La primera moneda es @Model.Take(1).Select(m=>m.Codigo)
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+   @foreach (var moneda in Model)
+    {
+        <h2>@moneda.Codigo</h2>
+        <h3>@moneda.Nombre</h3>
+    }
 </div>

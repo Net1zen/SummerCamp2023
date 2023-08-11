@@ -1,8 +1,8 @@
-﻿using ConversorWeb.Models;
-using ConversorWeb.Servicios;
-using Entidades;
+﻿using AutoMapper;
+using ConversorWeb.Models;
+using ConversorWeb.Profiles;
+using ConversorWeb.Utils;
 using Microsoft.AspNetCore.Mvc;
-using ProyectoFinalConsola;
 using System.Diagnostics;
 
 namespace ConversorWeb.Controllers
@@ -22,39 +22,50 @@ namespace ConversorWeb.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IRepositorioMonedas repositorioMonedas;
+        private readonly IMapper mapper;
 
-        public HomeController(ILogger<HomeController> logger, IRepositorioMonedas repositorioMonedas)
+        public HomeController(ILogger<HomeController> logger,
+                               IRepositorioMonedas repositorioMonedas,
+                               IMapper mapper)
         {
             _logger = logger;
             this.repositorioMonedas = repositorioMonedas;
+            this.mapper = mapper;
         }
 
         public IActionResult Index()
         {
+            //var apiMonedas = new ApiMonedas();
+            //List<MonedaJson> listaMonedasApi = apiMonedas.ObtenerMonedas();
+
+            //List<MonedaJson> listaMonedasApi = repositorioMonedas.ObtenerMonedas();
+
+            //foreach (MonedaJson monedaJson in listaMonedasApi)
+            //{
+            //    //var moneda = new Moneda
+            //    //{
+            //    //    CodigoMoneda = monedaJson.CodigoMoneda
+            //    //};
+
+            //    // Moneda moneda = monedaJson;
+
+            //    Moneda moneda = mapper.Map<Moneda>(monedaJson);
+
+            //    repositorioMonedas.AgregarMoneda(moneda);
+            //}
+
+
+            //_logger.LogInformation("Estoy en el index");
+            //IEnumerable<Moneda> lista = repositorioMonedas.ObtenerMonedas();
+
+            //return View(lista);
+
+            // Antiguo*
             _logger.LogInformation("Estoy en el index");
-            IEnumerable<Models.Moneda> lista = repositorioMonedas.ObtenerMonedas();
+            IEnumerable<Moneda> lista = repositorioMonedas.ObtenerMonedas();
 
             ViewBag.saludo = "Hola mundo desde C#";
             ViewBag.fecha = DateTime.Now;
-
-            //ViewBag.Euro = new Moneda
-            //{
-            //    Codigo = "EUR",
-            //    Nombre = "Euro",
-            //    ValorEnDolares = 1.113
-            //};
-
-            //Conversor conversor = new Conversor();
-            //foreach (var moneda in conversor.Monedas)
-            //{
-
-            //    ViewBag.Moneda += $"\t{moneda.Codigo} - {moneda.Nombre}";
-            //}
-
-            //var serviciomonedas = new ServicioMonedas();
-            //var serviciomonedas = new ServicioCriptoMonedas();
-            //IServicioMoneda servicioMoneda = new ServicioMoneda();
-            //var lista = servicioMoneda.ObtenerMonedas();
 
             // Mostrar algo que va desde controller a la vista
             return View(lista); // Indicar explicitamente lo que queremos que llegue a la vista
@@ -62,9 +73,6 @@ namespace ConversorWeb.Controllers
 
         public IActionResult Privacy()
         {
-            throw new Exception();
-            //IServicioMoneda servicioMoneda = new ServicioMoneda();
-            //var lista = servicioMoneda.ObtenerMonedas();
             return View();
         }
 
