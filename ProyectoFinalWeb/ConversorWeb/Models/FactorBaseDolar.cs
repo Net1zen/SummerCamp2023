@@ -2,9 +2,7 @@
 {
     public class FactorBaseDolar
     {
-        private static int nextId = 0;
-
-        public int Id { get; set; } //Puesta manualmente?
+        public int Id { get; set; }
 
         public const string MonedaOrigen = "USD";
         public string MonedaDestino { get; set; }
@@ -13,7 +11,6 @@
 
         public FactorBaseDolar(string monedaDestino, double factor)
         {
-            Id = nextId++;
             MonedaDestino = monedaDestino;
             Factor = factor;
         }

@@ -29,9 +29,7 @@ namespace ConversorWeb.Controllers
         [HttpGet]
         public IActionResult Alta()
         {
-
-            Moneda moneda = new Moneda { Code = "USE", Name = "Dolar ", Symbol = "$" };
-            return View(moneda);
+            return View();
         }
 
         [HttpPost]

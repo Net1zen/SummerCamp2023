@@ -55,7 +55,6 @@ namespace ConversorWeb.Controllers
             //}
 
 
-            //_logger.LogInformation("Estoy en el index");
             //IEnumerable<Moneda> lista = repositorioMonedas.ObtenerMonedas();
 
             //return View(lista);
@@ -63,9 +62,6 @@ namespace ConversorWeb.Controllers
             // Antiguo*
             _logger.LogInformation("Estoy en el index");
             IEnumerable<Moneda> lista = repositorioMonedas.ObtenerMonedas();
-
-            ViewBag.saludo = "Hola mundo desde C#";
-            ViewBag.fecha = DateTime.Now;
 
             // Mostrar algo que va desde controller a la vista
             return View(lista); // Indicar explicitamente lo que queremos que llegue a la vista

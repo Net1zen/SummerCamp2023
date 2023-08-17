@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ConversorWeb.Models
+namespace Entidades
 {
     //[Table("Moneda")]
     public class Moneda
@@ -12,10 +12,12 @@ namespace ConversorWeb.Models
         [MaxLength(3)]
         public string Code { get; set; }
         [Required]
+        [MaxLength(100)]
         public string Name { get; set; }
         [Required]
+        [MaxLength(3)]
         public string Symbol { get; set; }
 
- 
+
     }
 }
