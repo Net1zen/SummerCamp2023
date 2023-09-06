@@ -1,0 +1,59 @@
+<div class='card'>
+    <div class='card-header'>
+        {{pageTitle}}
+    </div>
+    <div class='card-body'>
+        <div class='row'>
+            <div class='col-md-2'>
+                <label for="select-moneda-origen">Elige una moneda de origen: </label>
+            </div>
+            <div class='col-md-4'>
+                <select name="select-moneda-origen" id="select-moneda-origen"
+                        [(ngModel)]="monedaOrigenSelect" (change)="resetearConversion()">
+                    <option *ngFor="let moneda of monedas" [value]="moneda.code">
+                        {{moneda.descripcion}}
+                    </option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                {{monedaOrigenSelect}}
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-2'>
+                <label for="select-moneda-destino">Elige una moneda de destino: </label>
+            </div>
+            <div class='col-md-4'>
+                <select name="select-moneda-destino" id="select-moneda-destino"
+                        [(ngModel)]="monedaDestinoSelect" (change)="resetearConversion()">
+                    <option *ngFor="let moneda of monedas" [value]="moneda.code">
+                        {{moneda.descripcion}}
+                    </option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                {{monedaDestinoSelect}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label for="select-moneda">Introduce el importe: </label>
+            </div>
+            <div class='col-md-4'>
+                <input [(ngModel)]="importe" type="text" (input)="resetearConversion()"/>
+            </div>
+            <div class="col-md-6">
+                {{importe}}
+            </div>
+        </div>
+        <div class="row">
+            <div class='col-md-2'>
+                <button class='btn btn-primary' name="Convertir"
+                        (click)="hacerConversion()">Convertir</button>
+            </div>
+        </div> 
+        <div class="row" *ngIf="conversionDone">
+            <div>{{importe | currency:monedaOrigenSelect:'symbol'}} equivale a {{resultado | currency:monedaDestinoSelect:'symbol'}}</div>
+        </div> 
+    </div> 
+</div>

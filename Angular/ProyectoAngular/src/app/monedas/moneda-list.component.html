@@ -1,0 +1,47 @@
+<div class='card'>
+  <div class='card-header'>
+    {{pageTitle}}
+  </div>
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col-md-2'>Filter by:</div>
+      <div class='col-md-4'>
+        <input [(ngModel)]="listFilter" type='text' />
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-6'>
+        <h4>Filtered by: {{listFilter}}</h4>
+      </div>
+    </div>
+    <div class='table-responsive'>
+      <table class='table'
+             *ngIf='monedas.length'>
+        <thead>
+          <tr>
+            <th>
+              <button class='btn btn-primary' (click)="toggleImage()">
+                {{showImage ? 'Hide' : 'Show' }} Image
+              </button>
+            </th>
+            <th>Nombre</th>
+            <th>Codigo</th>
+            <th>Simbolo</th>
+            <th>Factor Conversion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let moneda of filteredMonedas'>
+            <td><img *ngIf="showImage" [src]="moneda.urlImagen" [title]="moneda.name"></td>
+            <td>{{ moneda.name }}</td>
+            <td>{{ moneda.code }}</td>
+            <td>{{ moneda.symbol }}</td>
+            <td>{{ moneda.factorConversion }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>
