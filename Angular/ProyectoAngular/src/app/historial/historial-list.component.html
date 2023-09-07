@@ -1,0 +1,33 @@
+<div class='card'>
+    <div class='card-header'>
+      {{pageTitle}}
+    </div>
+    <div class='card-body'>
+      <div class='table-responsive'>
+        <table class='table' *ngIf='historiales.length'> 
+          <thead>
+            <tr>
+              <th>Moneda origen</th>
+              <th>Moneda destino</th>
+              <th>Factor de conversion</th>
+              <th>Importe</th>
+              <th>Resultado</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let historial of historiales'>
+              <td>{{ historial.codigoMonedaOrigen }}</td>
+              <td>{{ historial.codigoMonedaDestino }}</td>
+              <td>{{ historial.factor | number:'1.2-4' }}</td>
+              <td>{{ historial.importe | currency:historial.codigoMonedaOrigen:'symbol' }}</td>
+              <td>{{ historial.resultadoConversion | currency:historial.codigoMonedaDestino:'symbol' }}</td>
+              <td>{{ historial.createdDate | date:'medium' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  
+  </div>

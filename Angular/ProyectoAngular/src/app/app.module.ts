@@ -9,6 +9,8 @@ import { MonedaListComponent } from './monedas/moneda-list.component';
 import { ProductListComponent } from './products/product-list.component';
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { HistorialListComponent } from './historial/historial-list.component';
+import { PrincipalComponent } from './principal/principal.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { RouterModule } from '@angular/router';
     ProductListComponent,
     MonedaListComponent,
     ConversorComponent,
+    HistorialListComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, RouterModule.forRoot([
       { path: 'monedas', component: MonedaListComponent },
-      {path: 'conversor', component: ConversorComponent},
+      {path: 'conversor', component: PrincipalComponent},
       {
         path: ''
         , redirectTo: 'conversor', pathMatch: 'full'

@@ -13,8 +13,8 @@ import { Component } from '@angular/core';
     <nav class="navbar navbar-expand navbar-light bg-light">
       <a class="navbar-brand">3enRayaCode</a>
       <ul class="nav nav-pills">
-        <li><a routerlink="/welcome" class="nav-link" ng-reflect-router-link="/conversor" href="/conversor">Home</a></li>
-        <li><a routerlink="/products" class="nav-link" ng-reflect-router-link="/monedas" href="/monedas">Product List</a></li>
+        <li><a routerlink="/conversor" class="nav-link" ng-reflect-router-link="/conversor" href="/conversor">Conversor</a></li>
+        <li><a routerlink="/monedas" class="nav-link" ng-reflect-router-link="/monedas" href="/monedas">Lista Monedas</a></li>
       </ul>
     </nav>
     <!-- <ul class='nav navbar-nav'>
