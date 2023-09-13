@@ -9,3 +9,5 @@ https://freecurrencyapi.com/
 https://api.chucknorris.io/
 
 https://www.boredapi.com/
+
+https://www.cursosdev.com/coupons
