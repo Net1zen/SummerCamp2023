@@ -1,8 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Contexto
 {
-    internal class PaymentDetailContext:DbContext
+    public class PaymentDetailContext : DbContext
     {
+        public PaymentDetailContext(DbContextOptions<PaymentDetailContext> options) : base(options)
+        {
+        }
+
+        public DbSet<PaymentDetail> PaymentDetails { get; set; }
     }
 }

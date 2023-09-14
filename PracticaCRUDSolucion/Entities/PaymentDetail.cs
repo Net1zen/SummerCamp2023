@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PracticaCRUD.Models
+namespace Entities
 {
     public class PaymentDetail
     {
