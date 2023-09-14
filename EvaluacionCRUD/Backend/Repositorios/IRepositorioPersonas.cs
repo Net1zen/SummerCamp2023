@@ -13,6 +13,8 @@ namespace Repositorios
         Task<bool> PersonaExistsAsync(string nombre);
         Task<bool> AltaPersonaAsync(Persona persona);
         Task<bool> SaveAsync();
+        Task<IEnumerable<Persona>> Obtener10PersonasCondicionAsync();
+
 
 
     }

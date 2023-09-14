@@ -31,6 +31,16 @@ namespace Repositorios
             return true;
         }
 
+        public async Task<IEnumerable<Persona>> Obtener10PersonasCondicionAsync()
+        {
+            DateTime fechaLimite = DateTime.Now.AddYears(-21);
+            return await _context.Persona.Where(x => x.FechaNacimiento <= fechaLimite)
+                .OrderByDescending(x => x.FechaNacimiento)
+                .Take(10)
+                .ToListAsync();
+
+        }
+
         public async Task<bool> PersonaExistsAsync(string nombre)
         {
             if (nombre == null)
@@ -45,6 +55,7 @@ namespace Repositorios
         {
             return (await _context.SaveChangesAsync() >= 0);
         }
+
 
 
     }

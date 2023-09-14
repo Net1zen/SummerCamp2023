@@ -27,7 +27,7 @@ namespace Backend.Controllers
         }
 
 
-        //api/Monedas
+        //api/Personas
         [HttpPost]
         public async Task<ActionResult<PersonaDTO>> crearPersona(
             PersonaCreacionDTO persona)
@@ -43,6 +43,20 @@ namespace Backend.Controllers
             await _repositorioPersonas.SaveAsync();
 
             return personaToReturn;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<PersonaDTO>>> GetPaises()
+        {
+            var lista = await _repositorioPersonas.Obtener10PersonasCondicionAsync();
+            var listaDTO = new List<PersonaDTO>();
+
+            foreach (var persona in lista)
+            {
+                listaDTO.Add(_mapper.Map<PersonaDTO>(persona));
+            }
+
+            return Ok(listaDTO);
         }
 
     }
